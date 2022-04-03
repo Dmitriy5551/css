@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* * {     отступы во всём документе = 0
+    padding: 0; 
+    margin: 0;
+} */
+
+
+body {
+    background-color: #f1f1f1;
+    color: #0f141e;
+
+    /* font-size: 16px;
+    font-weight: normal;
+    font-family: 'Roboto', sans-serif; */
+
+    font: normal 16px 'Roboto', sans-serif;
+
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+
+
+
+}
+
+a { /* Обращение ко всем ссылкам в документе*/
+    color: black;
+    text-decoration: none; /*Убрали подчёркивания у ссылок*/
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: red;
+}
+
+a:visited {
+    color: gray;
+}
+
+.avatar {
+    width: 200px;
+    border-radius: 28px;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 025);
+}
+
+.info {
+    display: flex;
+    margin-bottom: 20px; /* Отступ снизу 20 пикселей*/
+}
+
+@media (max-width: 700px) {
+    .info {
+        text-align: center;
+        display: block;
+    }
+}
+
+.info-text {
+    margin-left: 40px; /* Отступ слева 40 пикселей*/
+}
+
+.info-text h4 {
+    margin-bottom: 10px; /* Отступ снизу*/
+}
+
+.info p {
+    color: #86898f;
+    margin: 0;  /*отступ*/
+    font-style: italic; /* Стиль шрифта - курсивный*/
+    font-weight: bold; /* Вес шрифта - жирный*/
+    /* text-decoration: underline; /* Оформление текста: подчеркивание*/
+    /* text-decoration: line-through; Оформление текста: зачёркнутый */
+    text-decoration: none;
+    /* text-transform: capitalize;  Преобразование текста: все слова с большой буквы */
+    /* text-transform: lowercase;  Преобразование текста: все маленькой буквы */
+    /* text-transform: uppercase; Преобразование текста: все большие буквы */
+    /* letter-spacing: 15px; интервал между буквами: 15 пикселей */
+    /* word-spacing: 40px; интервал между словами: 40 пикселей */
+}
+
+/* Box model */
+
+.container {
+    max-width: 75%;
+    margin: auto;
+    padding-top: 30px; /* Отступ сверху*/
+}
+
+/* .social {
+    background: green; */
+    /* padding: 15px; */
+    /* padding: 15px 40px; */
+    /* padding: 15px 20px 25px 30px; */
+    /* padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    border:  15px solid red;
+    border-bottom-style: dotted;
+    border-top-width: 15px;
+    border-right-color: blue;
+    margin: 20px solid ;
+} */
+
+/* .box-model >div {
+    float: left; Плыть: слева
+    background: #000; Фон
+    height: 200px; Высота
+    border: 4px solid red; Граница
+    width: 25%; Ширина
+    box-sizing: border-box; размер коробки: рамка-коробка
+} */
+
+.bg-yellow {
+    background: #fff9dc;
+}
+
+.bg-green {
+    background: #e5ffe7;
+}
+
+.bg-red {
+    background: #ffe5e5;
+}
+
+.card {
+    padding: 15px 20px;
+    /* background: red; */
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.list {
+    padding: 0 20px;
+    /* list-style: none; Стиль списка. Убрать нумерацию в списке */
+}
+
+.list li {
+    color: #86898f;
+    margin-bottom: 10px;
+    /* border-bottom: 1px solid grey; Подчёркивание каждого элемента */
+}
+
+.table {
+    width: 100%;
+}
+
+.table td {
+    padding-bottom: 10px;
+}
+
+.table td:nth-child(2),
+.table td:nth-child(3) {
+    color: #86898f;
+}
+
+/* .table tr:nth-child(odd, even) {   Покрасить нечётные, чётные строки
+    background: red;
+} */
+
+.link-list {
+    list-style: none;
+    padding: 0; /* Отступ 0*/
+}
+
+.link-list li {  /* Элементы*/
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1 solid #ccc;
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+.form-group label {
+    display: block; /* Каждый элемент на отдельной строчке*/
+    font-size: 14px;
+    color: #86898f;
+}
+
+.form-group input,
+.form-group textarea {  /* Текстовая область*/
+    width: 100%;
+    box-sizing: border-box; /* размер коробки: рамка-коробка */
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #ccc; /*  Подчёркнутая нижняя граница*/
+    color: #000;
+    padding: 15px 0 10px;
+    outline: none; /* Обнуление границы при вводе*/
+    font-family: inherit; /* Семейство шрифтов: наследовать*/
+}
+
+.row { /* Ряд*/
+    display: flex; /* Дисплей: гибкий*/
+    margin-bottom: 20px;
+}
+
+.row > .form-group {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.row > .form-group:first-child { /* строка > .форма-группа:первенец. Отступ между графами*/
+    margin-right: 20px;
+}
+
+.btn {
+    background: #111;
+    color: #fff; /* Цвет текста на кнопке "Связаться"*/
+    padding: 15px 20px; /* Размер кнопки*/
+    border: none;
+    font-family: inherit; /* Семейство шрифтов: наследовать*/
+    cursor: pointer; /* курсор: указатель;*/
+}
+
+.btn:hover {
+    opacity: 0.8; /* Подсветка кнопки*/
+}
+
+/* Position */
+
+/* .position {
+    position: relative; /* положение: относительное*/
+    /* border: 4px solid black;
+    margin-top: 40px;
+    padding: 20px; */
+    /* height: 300px;Высота */
+/* } */
+
+/* .box {
+    position: fixed;
+    bottom: 50px;
+    left: 0px;
+    right: 50px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: lightcoral;
+    bottom: 60px;
+} */
+
+
+
+
